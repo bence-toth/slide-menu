@@ -1,6 +1,12 @@
 import { useState, useCallback } from "react";
 import classNames from "classnames";
-import { BsArrowLeft } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import {
+  BsArrowLeft,
+  BsFillHouseFill,
+  BsFillBriefcaseFill,
+  BsFillChatRightTextFill,
+} from "react-icons/bs";
 
 import "./SlideMenu.css";
 
@@ -18,9 +24,30 @@ const SlideMenu = () => {
       <div>
         <nav>
           <ul>
-            <li>Menu 1</li>
-            <li>Menu 2</li>
-            <li>Menu 3</li>
+            <li>
+              <Link className="slideMenuItem" to="/">
+                <div className="icon">
+                  <BsFillHouseFill />
+                </div>
+                <div className="label">Menu item</div>
+              </Link>
+            </li>
+            <li>
+              <Link className="slideMenuItem" to="/">
+                <div className="icon">
+                  <BsFillBriefcaseFill />
+                </div>
+                <div className="label">Other menu item</div>
+              </Link>
+            </li>
+            <li>
+              <Link className="slideMenuItem" to="/">
+                <div className="icon">
+                  <BsFillChatRightTextFill />
+                </div>
+                <div className="label">Yet another menu</div>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
