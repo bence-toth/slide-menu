@@ -1,0 +1,28 @@
+.slideMenu {
+  width: 48px;
+  background-color: hsl(247, 100%, 13%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.25s;
+}
+
+.slideMenu.isExpanded {
+  width: 240px;
+}
+
+.slideMenu .logo {
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.slideMenuToggle {
+  width: 100%;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+}
