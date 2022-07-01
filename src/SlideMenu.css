@@ -1,7 +1,7 @@
 .slideMenu {
   width: 48px;
   background-color: hsl(247, 100%, 13%);
-  color: white;
+  color: hsl(0, 0%, 90%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,17 +12,35 @@
   width: 240px;
 }
 
-.slideMenu .logo {
-  padding: 1em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .slideMenuToggle {
   width: 100%;
-  padding: 0.5em 1em;
+  padding-block: 0.5em;
   background-color: transparent;
   border: 0;
   color: inherit;
   font-family: inherit;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.slideMenuToggle:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: hsl(0, 0%, 100%);
+}
+
+.slideMenuToggle > div {
+  display: flex;
+}
+
+.slideMenu .slideMenuToggle > div {
+  transform: rotate(0deg);
+  transition: transform 0.25s;
+}
+
+.slideMenu:not(.isExpanded) .slideMenuToggle > div {
+  transform: rotate(-180deg);
 }

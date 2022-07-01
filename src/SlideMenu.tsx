@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import classNames from "classnames";
+import { BsArrowLeft } from "react-icons/bs";
 
 import "./SlideMenu.css";
 
@@ -15,7 +16,6 @@ const SlideMenu = () => {
       className={classNames("slideMenu", { isExpanded: isSlideMenuExpanded })}
     >
       <div>
-        <header className="logo">Logo</header>
         <nav>
           <ul>
             <li>Menu 1</li>
@@ -27,7 +27,9 @@ const SlideMenu = () => {
       <div>
         <footer>
           <button className="slideMenuToggle" onClick={onToggleSideMenu}>
-            Toggle
+            <div>
+              <BsArrowLeft />
+            </div>
           </button>
         </footer>
       </div>
