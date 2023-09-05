@@ -7,6 +7,7 @@ import {
   BsFillBriefcaseFill,
   BsFillChatRightTextFill,
 } from "react-icons/bs";
+import SlideMenuItem from "./SlideMenuItem";
 
 import "./SlideMenu.css";
 
@@ -25,28 +26,25 @@ const SlideMenu = () => {
         <nav>
           <ul>
             <li>
-              <Link className="slideMenuItem" to="/">
-                <div className="icon">
-                  <BsFillHouseFill />
-                </div>
-                <div className="label">Menu item</div>
-              </Link>
+              <SlideMenuItem
+                icon={<BsFillHouseFill />}
+                label="Menu item"
+                isSlideMenuExpanded={isSlideMenuExpanded}
+              />
             </li>
             <li>
-              <Link className="slideMenuItem" to="/">
-                <div className="icon">
-                  <BsFillBriefcaseFill />
-                </div>
-                <div className="label">Other menu item</div>
-              </Link>
+              <SlideMenuItem
+                icon={<BsFillBriefcaseFill />}
+                label="Other menu item"
+                isSlideMenuExpanded={isSlideMenuExpanded}
+              />
             </li>
             <li>
-              <Link className="slideMenuItem" to="/">
-                <div className="icon">
-                  <BsFillChatRightTextFill />
-                </div>
-                <div className="label">Yet another menu</div>
-              </Link>
+              <SlideMenuItem
+                icon={<BsFillChatRightTextFill />}
+                label="Yet another menu"
+                isSlideMenuExpanded={isSlideMenuExpanded}
+              />
             </li>
           </ul>
         </nav>

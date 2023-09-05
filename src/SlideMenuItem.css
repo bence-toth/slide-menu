@@ -1,0 +1,33 @@
+.slideMenuItem {
+  display: flex;
+  color: inherit;
+  height: 48px;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.25s, width 0.5s;
+  overflow: hidden;
+  background-color: hsl(247, 100%, 13%);
+}
+
+.slideMenuItem:hover {
+  background-color: hsl(247, 100%, 18%);
+  color: hsl(0, 0%, 100%);
+}
+
+.slideMenuItem .icon {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.slideMenuItem .label {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.slideMenuItem .labelInnerWrapper {
+  padding-right: 1em;
+}
